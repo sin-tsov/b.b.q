@@ -1,4 +1,8 @@
 module ApplicationHelper
+def user_avatar(user)
+  asset_pack_path('media/images/user.png')    
+end
+
 def bootstrap_class_for(flash_type)
   {
     success: 'alert-success',

@@ -13,6 +13,7 @@ class User < ApplicationRecord
   before_validation :set_name, on: :create
 
   private
+  
   def set_name
       self.name = "Приятель#{rand(777)}" if self.name.blank?
   end
