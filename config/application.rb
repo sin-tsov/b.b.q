@@ -22,7 +22,7 @@ Bundler.require(*Rails.groups)
 module Bbq
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.0
+  config.load_defaults 6.0
 
   config.i18n.default_locale = :ru  
 
@@ -32,6 +32,7 @@ module Bbq
     # the framework and any gems in your application.
 
     # Don't generate system test files.
+    config.time_zone = 'Moscow'
     config.generators.system_tests = nil
   end
 end
