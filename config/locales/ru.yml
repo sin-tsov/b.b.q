@@ -87,9 +87,11 @@ ru:
     back: 'вернуться'
     save: 'Сохранить'
   error:
-    one: "В вашей форме %{count} ошибка"
-    few: "В вашей форме %{count} ошибки"
-    many: "В вашей форме %{count} ошибок"
+    zero: ошибок
+    one: ошибка
+    few: ошибки
+    many: ошибок
+    other: ошибки
   comments:
     form:
       send_btn: Отправить
