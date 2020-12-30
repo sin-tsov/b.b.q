@@ -145,6 +145,7 @@ ru:
       owner: Организатор
   views:
     events:
+      are_you_sure: Вы уверены, что хотите удалить это событие?
       password_form_header: Доступ только по пинкоду
       pincode: Пинкод
     photos:
