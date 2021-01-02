@@ -26,6 +26,7 @@
 
 .event-description * {
   color: white;
+  padding-left: 5px;
 }
 
 .event-description a {
