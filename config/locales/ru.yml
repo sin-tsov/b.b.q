@@ -36,7 +36,8 @@ ru:
       event:
         title: 'Название'
         address: 'Место проведения'
-        datetime: 'Дата и время'
+        date: 'Дата'
+        time: 'Время'
         description: 'Описание'
         pincode: Пинкод доступа
       
