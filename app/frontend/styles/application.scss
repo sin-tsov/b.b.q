@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 @import 'events';
+@import 'users';
 @import "~air-datepicker/dist/css/datepicker.min";
 
 html,
@@ -64,7 +65,7 @@ a:hover {
   padding: 0;
   overflow: hidden;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 20px;  
 }
 
 .thumbnail h3 {

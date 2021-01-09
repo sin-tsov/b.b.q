@@ -1,16 +1,21 @@
 ru:
-    # Перевод моделей
+  error:
+    zero: ошибок
+    one: ошибка
+    few: ошибки
+    many: ошибок
+    other: ошибки
   activerecord:
-    # Перевод названия моделей
-    models:
-      user: 'Пользователь'
-      event: 'Событие'
-      subscription: Подписка
-      comment: Комментарий
-      photo: Фотография
-
     errors:
+      messages:
+        extension_whitelist_error: ошибка расширения файла  
       models:
+        subscription:
+          attributes:
+            user: 
+              own_custom_event: 'вы не можете подписываться на свои события'
+            user_email:
+              exists_email: перепроверьте, нельзя подписать существующего пользователя
         user:
           attributes:
             password_confirmation:
@@ -21,25 +26,29 @@ ru:
         event:
           attributes:
             datetime:
-              after: "должно быть после %{restriction}"  
-
-    # Перевод названий аттрибутов моделей
+              after: "должно быть после %{restriction}"
+    models:
+      user: Регистрация пользователя
+      event: Событие
+      subscription: Подписка
+      comment: Комментарий
+      photo: Фотография
+    
     attributes:
       user:
-        email: 'Email'
-        name: 'Имя'
-        password: 'Пароль'
-        avatar: Аватар
-        password_confirmation: 'Подтверждение пароля'
-        current_user: Текущий юзер
+        email: Email
+        name: Имя
+        avatar: Аватарка
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        current_password: Текущий пароль
         remember_me: Запомнить меня
       event:
-        title: 'Название'
-        address: 'Место проведения'
-        datetime: 'Дата и время'
-        description: 'Описание'
+        title: Название
+        address: Адрес
+        description: Описание
+        datetime: Дата
         pincode: Пинкод доступа
-      
       subscription:
         user: Пользователь
         user_name: Имя
@@ -49,16 +58,14 @@ ru:
         user_name: Имя
       photo:
         photo: Фотография
-
-  # Перевод сообщений, которые отправляет контроллер
   controllers:
     events:
-      created: 'Вы создали новое мероприятие'
-      updated: 'Вы обновили мероприятие'
-      destroyed: 'Вы удалили мероприятие :('
+      created: Событие успешно создано.
+      updated: Событие успешно обновлено.
+      destroyed: Событие удалено.
       wrong_pincode: Неверный пинкод!
     users:
-      updated: 'Вы обновили свой профиль'
+      updated: Данные профиля успешно обновлены.
     comments:
       created: Комментарий добавлен.
       destroyed: Комментарий удален.
@@ -71,11 +78,8 @@ ru:
       error: Что-то не так с фотографией.
       created: Вы добавили фотографию к событию.
       destroyed: Вы удалили фотографию.
-
-  # Перевод названия приложения и компании-разработчика
   app:
     name: 'Шашлыки'
-    company: 'Хороший программист'
     sign_in: 'Войти'
     sign_up: 'Зарегистрироваться'
     company: 'BBQ'
@@ -86,33 +90,29 @@ ru:
     signout: 'Выйти'
     back: 'вернуться'
     save: 'Сохранить'
-  error:
-    zero: ошибок
-    one: ошибка
-    few: ошибки
-    many: ошибок
-    other: ошибки
   comments:
     form:
       send_btn: Отправить
     comment:
       title: Удаление события.
       destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
-      commit: "Да, конечно."
+      comment: "Да, конечно."
       cancel: "Нет, я передумал."
   subscriptions:
     form:
-      subscribe_btn: 'Подписаться'
+      subscribe: 'Подписаться'
     subscription:
       title: Отписка от события.
+      has_email: 'Пользователь с таким email уже зарегистрирован'
+      user_email: уже занят зарегистрированным пользователем
       destroy_confirm: 'Вы уверены, что хотите отписаться от события?'
-      commit: "Да, конечно."
+      comment: "Да, конечно."
       cancel: "Нет, я передумал."
   photos:
     photo:
       title: Удаление фотографии.
       destroy_confirm: 'Вы уверены, что хотите удалить фото?'
-      commit: "Да, конечно."
+      comment: "Да, конечно."
       cancel: "Нет, я передумал."
     photo_title:
       title: Удаление фотографии.
@@ -134,6 +134,8 @@ ru:
       email: Email
       author: Автор
       event: Событие
+      your_custom_event: 'Вы не можете подписываться на свои события'
+      user_email: уже занят зарегистрированным пользователем
       datetime: Дата события
       owner: Организатор
     photo:
@@ -162,10 +164,6 @@ ru:
     edit_password: Смените ваш пароль
     password_confirmation_label: Подстверждение пароля
     change_password: Изменить пароль
-    min_password_length:
-      one: "%{count} символ минимум"
-      few: "%{count} символа минимум"
-      many: "%{count} символов минимум"
     forgot_password: Забыли ваш пароль?
     send_instructions_btn: Отправить инструкции по смене пароля
     edit_user: Редактирование данных пользователя
@@ -195,3 +193,33 @@ ru:
       commit: "Да, конечно."
       cancel: "Нет, я передумал."
     waiting_confirmation: "Ожидается подтверждение для:"
+    global:
+    language: 'Язык'
+    confirm:
+      consent: 'Вы уверены, что хотите удалить это событие?'
+      warning: "При нажатии на 'Да' вы не сможете вернуть обратно данное событие"
+      ok: 'Да'
+      cancel: 'Отмена'
+    error:
+      close: 'Закрыть'
+      email_exists: 'Пользователь с такой почтой уже существует'
+      event_of_subscriber: 'Вы не можете подписываться на свои события'
+    forms:
+      or: 'или'
+      ready: 'Готово'
+      save: 'Сохранить'
+      back: 'вернуться'
+      subscribe: 'Подписаться'
+      login: 'Войти'
+      delete: 'Удалить'
+      forget_password: 'Забыли пароль?'
+      change_password: 'Сменить пароль'
+      placeholder:
+        email: 'Почта'
+        name: 'Имя'
+        body_comment: 'Ваш комментарий'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        new_password: 'Новый пароль'
+        new_password_confirmation: 'Подтверждение нового пароля'
+        p_s_condition: 'Не менее %{count} символов'  
