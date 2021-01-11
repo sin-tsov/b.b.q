@@ -48,7 +48,6 @@ ru:
         address: Адрес
         description: Описание
         datetime: Дата
-        pincode: Пинкод доступа
       subscription:
         user: Пользователь
         user_name: Имя
@@ -147,6 +146,7 @@ ru:
       owner: Организатор
   views:
     events:
+      edit: Изменить мероприятие
       are_you_sure: Вы уверены, что хотите удалить это событие?
       password_form_header: Доступ только по пинкоду
       pincode: Пинкод

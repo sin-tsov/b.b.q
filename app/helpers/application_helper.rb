@@ -1,3 +1,4 @@
+# возвращает путь к аватарке данного юзера
 module ApplicationHelper
   def user_avatar(user)
     return user.avatar.url if user.avatar?
