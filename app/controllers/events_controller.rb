@@ -1,8 +1,8 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, except: [:show :index]
+  before_action :authenticate_user!, except: %i[show index]
 
   before_action :set_event, only: %i[show]
-  before_action :set_current_user_event, only: [:edit :update :destroy]
+  before_action :set_current_user_event, only: %i[edit update destroy]
 
   def index
     @events = Event.all
@@ -23,7 +23,6 @@ class EventsController < ApplicationController
 
   def create
     @event = current_user.events.build(event_params)
-
     if @event.save
       redirect_to @event, notice: I18n.t('controllers.events.created')
     else
@@ -41,7 +40,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
-    redirect_to @event, notice: I18n.t('controllers.events.destroyed')
+    redirect_to events_path, notice: I18n.t('controllers.events.destroyed')
   end
 
   private
