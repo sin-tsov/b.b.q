@@ -7,9 +7,11 @@ class SubscriptionsController < ApplicationController
     @new_subscription.user = current_user
 
     if @new_subscription.save
-      redirect_to @event, notice: I18n.t('controllers.subscription.created')
+      # Отправляем письмо автору события
+      EventMailer.subscription(@event, @new_subscription).deliver_now
+      redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
     else
-      render 'events/show', alert: I18n.t('controllers.subscription.error')
+      render 'events/show', alert: I18n.t('controllers.subscriptions.error')
     end
   end
 

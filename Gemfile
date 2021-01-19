@@ -15,6 +15,7 @@ gem 'rails-i18n', '~> 6.0.0'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
+gem 'mailjet'
 
 group :production do
   gem 'pg'
@@ -28,4 +29,5 @@ end
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
+  gem 'letter_opener'
 end
