@@ -6,6 +6,8 @@ require("bootstrap")
 
 import "bootstrap/dist/js/bootstrap";
 
+import '../scripts/map'
+
 import "air-datepicker/dist/js/datepicker.min"
 
 import "../styles/application";
