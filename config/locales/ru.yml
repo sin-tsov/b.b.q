@@ -69,7 +69,7 @@ ru:
       created: Комментарий добавлен.
       destroyed: Комментарий удален.
       error: Ошибка с комментарием.
-    subscription:
+    subscriptions:
       created: Вы подписанны на это событие.
       destroyed: Участник отписан.
       error: "Подписка/отписка на сработала."
